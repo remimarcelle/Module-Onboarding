@@ -13,15 +13,60 @@
     </header>
     <main>
       <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
+        <!-- requirement: all fields must be required -->
+
+        <!-- requirement: ask for customer's full name -->
+        <!-- validation: name must be at least 2 characters -->
+        <label for="name">What’s your full name?</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          minlength="2" 
+          placeholder="e.g. Abel T. Abelson" 
+        />
+
+        <!-- requirement: ask for customer's email address -->
+        <!-- validation: must match a valid email format -->
+        <label for="email">Your email address:</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="e.g. you@example.com"
+        />
+
+        <!-- requirement: customer must choose one t-shirt colour -->
+        <!-- validation: limit choice to 3 fixed colour options -->
+        <fieldset>
+          <legend>Choose your t-shirt colour:</legend>
+          <label><input type="radio" name="colour" value="black" required /> Black</label><br />
+          <label><input type="radio" name="colour" value="white" /> White</label><br />
+          <label><input type="radio" name="colour" value="sage" /> Sage</label>
+        </fieldset>
+
+        <!-- requirement: customer must select a t-shirt size -->
+        <!-- validation: size must be one of 6 defined options -->
+        <label for="size">Select your size:</label>
+        <select id="size" name="size" required>
+          <option value="">-- Choose one --</option>
+          <option value="XS">Extra Small (XS)</option>
+          <option value="S">Small (S)</option>
+          <option value="M">Medium (M)</option>
+          <option value="L">Large (L)</option>
+          <option value="XL">Extra Large (XL)</option>
+          <option value="XXL">Double XL (XXL)</option>
+        </select>
+
+        <!-- requirement: a submit button must be present -->
+        <button type="submit">Place Order</button>
       </form>
     </main>
     <footer>
       <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <h2>By R.M.B</h2>
     </footer>
   </body>
 </html>
